@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AD Replikasyon Raporu</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+  :root {
+    --bg: #0d1117;
+    --bg2: #161b22;
+    --bg3: #1c2128;
+    --border: #30363d;
+    --border2: #3d444d;
+    --text: #e6edf3;
+    --text2: #8d96a0;
+    --text3: #484f58;
+    --green: #3fb950;
+    --green-light: #3fb950;
+    --green-bg: rgba(46,160,67,0.12);
+    --green-border: rgba(46,160,67,0.35);
+    --red: #f85149;
+    --red-light: #f85149;
+    --red-bg: rgba(218,54,51,0.12);
+    --red-border: rgba(218,54,51,0.35);
+    --amber: #e3b341;
+    --amber-light: #e3b341;
+    --amber-bg: rgba(187,128,9,0.12);
+    --amber-border: rgba(187,128,9,0.35);
+    --blue: #58a6ff;
+    --blue-light: #58a6ff;
+    --blue-bg: rgba(31,111,235,0.12);
+    --blue-border: rgba(31,111,235,0.35);
+    --font: 'DM Sans', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  /* ---- Header ---- */
+  .header {
+    background: var(--bg2);
+    border-bottom: 1px solid var(--border);
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header-left { display: flex; align-items: center; gap: 14px; }
+  .header-icon {
+    width: 36px; height: 36px;
+    background: var(--blue-bg);
+    border: 1px solid var(--blue-border);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .header-icon svg { width: 18px; height: 18px; }
+  .header-title { font-size: 15px; font-weight: 600; color: var(--text); letter-spacing: -0.2px; }
+  .header-sub { font-size: 12px; color: var(--text2); margin-top: 1px; font-family: var(--mono); }
+  .header-time { font-size: 11px; color: var(--text3); font-family: var(--mono); }
+
+  /* ---- Main layout ---- */
+  .main { padding: 28px 32px; max-width: 1200px; }
+
+  /* ---- Summary cards ---- */
+  .summary { display: flex; gap: 12px; margin-bottom: 28px; }
+  .sum-card {
+    flex: 1;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color .2s;
+  }
+  .sum-card:hover { border-color: var(--border2); }
+  .sum-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  }
+  .sum-card.ok::before { background: var(--green); }
+  .sum-card.err::before { background: var(--red); }
+  .sum-card.warn::before { background: var(--amber-light); }
+  .sum-card.info::before { background: var(--blue-light); }
+  .sum-val { font-size: 28px; font-weight: 600; line-height: 1; margin-bottom: 6px; font-family: var(--mono); }
+  .sum-card.ok   .sum-val { color: var(--green-light); }
+  .sum-card.err  .sum-val { color: var(--red-light); }
+  .sum-card.warn .sum-val { color: var(--amber-light); }
+  .sum-card.info .sum-val { color: var(--blue-light); }
+  .sum-lbl { font-size: 12px; color: var(--text2); }
+
+  /* ---- DC Table ---- */
+  .section { margin-bottom: 28px; }
+  .section-title {
+    font-size: 12px; font-weight: 600; color: var(--text2);
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+  }
+  .section-title::after {
+    content: ''; flex: 1; height: 1px; background: var(--border);
+  }
+
+  .dc-table {
+    width: 100%;
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    font-size: 13px;
+  }
+  .dc-table th {
+    background: var(--bg3);
+    color: var(--text2);
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 10px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  .dc-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: middle;
+  }
+  .dc-table tr:last-child td { border-bottom: none; }
+  .dc-table tbody tr { transition: background .15s; }
+  .dc-table tbody tr:hover { background: rgba(255,255,255,0.02); }
+  .dc-table tbody tr.row-focus { background: rgba(88,166,255,0.10); }
+  .dc-table tr.has-error { background: rgba(218,54,51,0.04); }
+  .dc-table tr.has-error:hover { background: rgba(218,54,51,0.07); }
+
+  .dc-name-cell { display: flex; align-items: center; gap: 10px; }
+  .dc-name-cell:hover .dc-dot { transform: scale(1.25); }
+  .dc-dot {
+    width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+    box-shadow: 0 0 6px currentColor;
+    transition: transform .12s ease, box-shadow .12s ease;
+  }
+  .dc-dot.ok   { background: var(--green-light); color: var(--green-light); }
+  .dc-dot.err  { background: var(--red-light);   color: var(--red-light); }
+  .dc-dot.warn { background: var(--amber-light); color: var(--amber-light); }
+  .dc-hostname { font-family: var(--mono); font-weight: 500; font-size: 13px; }
+
+  .badge {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 11px; font-weight: 500; font-family: var(--mono);
+    padding: 3px 8px; border-radius: 5px; white-space: nowrap;
+  }
+  .badge.ok   { background: var(--green-bg);  color: var(--green-light);  border: 1px solid var(--green-border); }
+  .badge.err  { background: var(--red-bg);    color: var(--red-light);    border: 1px solid var(--red-border); }
+  .badge.warn { background: var(--amber-bg);  color: var(--amber-light);  border: 1px solid var(--amber-border); }
+  .badge.info { background: var(--blue-bg);   color: var(--blue-light);   border: 1px solid var(--blue-border); }
+  .badge.neutral { background: rgba(255,255,255,0.05); color: var(--text2); border: 1px solid var(--border); }
+
+  .role-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+  .role-tag {
+    font-size: 10px; padding: 2px 7px; border-radius: 4px;
+    background: var(--blue-bg); color: var(--blue-light);
+    border: 1px solid var(--blue-border);
+    font-family: var(--mono);
+  }
+
+  .mono-text { font-family: var(--mono); font-size: 12px; color: var(--text2); }
+  .ip-text { font-family: var(--mono); font-size: 12px; color: var(--blue-light); }
+
+  /* ---- Timeline ---- */
+  .timeline-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 28px;
+  }
+  .timeline-header {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px; font-weight: 600;
+  }
+  .timeline-body { padding: 20px; }
+  .tl-row { display: flex; align-items: center; gap: 14px; margin-bottom: 32px; }
+  .tl-row:last-child { margin-bottom: 0; }
+  .tl-label { font-size: 11px; color: var(--text2); width: 140px; flex-shrink: 0; font-family: var(--mono); }
+  .tl-bar-wrap { flex: 1; height: 10px; background: var(--bg3); border-radius: 5px; position: relative; overflow: visible; }
+  .tl-event-wrap {
+    position: absolute; top: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center;
+    cursor: pointer;
+  }
+  .tl-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    transform: translateY(-50%);
+    transition: transform .15s, box-shadow .15s;
+    flex-shrink: 0;
+  }
+  .tl-event-wrap:hover .tl-dot { transform: translateY(-50%) scale(1.5); }
+  .tl-dot.ok-ev   { background: var(--green-light); box-shadow: 0 0 6px var(--green); }
+  .tl-dot.err-ev  { background: var(--red-light);   box-shadow: 0 0 6px var(--red); }
+  .tl-dot.warn-ev { background: var(--amber-light); box-shadow: 0 0 6px var(--amber); }
+  .tl-ev-time {
+    margin-top: 8px;
+    font-size: 10px; font-family: var(--mono);
+    white-space: nowrap; text-align: center; line-height: 1.4;
+  }
+  .tl-ev-time.ok-t   { color: var(--text3); }
+  .tl-ev-time.err-t  { color: var(--red-light); }
+  .tl-ev-time.warn-t { color: var(--amber-light); }
+  .tl-time-label { font-size: 10px; color: var(--text3); width: 60px; text-align: right; font-family: var(--mono); }
+
+  /* Timeline tick labels */
+  .tl-ticks { display: flex; justify-content: space-between; padding: 0 0 6px 154px; font-size: 10px; color: var(--text3); font-family: var(--mono); padding-right: 74px; }
+
+  /* ---- Tooltip ---- */
+  .tooltip {
+    position: fixed; z-index: 1000;
+    background: var(--bg3);
+    border: 1px solid var(--border2);
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 12px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity .15s;
+    box-shadow: 0 8px 24px rgba(0,0,0,.5);
+    min-width: 160px;
+  }
+  .tooltip.show { opacity: 1; }
+  .tooltip-title { font-weight: 600; margin-bottom: 6px; font-family: var(--mono); }
+  .tooltip-row { display: flex; justify-content: space-between; gap: 12px; color: var(--text2); margin-top: 3px; }
+  .tooltip-row span:last-child { color: var(--text); }
+
+  /* ---- Footer ---- */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding: 14px 32px;
+    font-size: 11px;
+    color: var(--text3);
+    font-family: var(--mono);
+    display: flex; justify-content: space-between;
+  }
+
+  /* pulse animation for error dot */
+  @keyframes pulse {
+    0%,100% { box-shadow: 0 0 4px var(--red-light); }
+    50%      { box-shadow: 0 0 10px var(--red-light), 0 0 20px rgba(248,81,73,.3); }
+  }
+  .dc-dot.err { animation: pulse 2s ease-in-out infinite; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-left">
+    <div class="header-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#58a6ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+        <path d="M7 8h10M7 11h6"/>
+      </svg>
+    </div>
+    <div>
+      <div class="header-title">Active Directory — Replikasyon Raporu</div>
+      <div class="header-sub">Domain: KBDC.LOCAL &nbsp;|&nbsp; Forest Mode: Windows Server 2016</div>
+    </div>
+  </div>
+  <div class="header-time" id="reportTime"></div>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- Summary -->
+  <div class="summary">
+    <div class="sum-card ok">
+      <div class="sum-val" id="sumOK">1</div>
+      <div class="sum-lbl">Sağlıklı DC</div>
+    </div>
+    <div class="sum-card err">
+      <div class="sum-val" id="sumErr">1</div>
+      <div class="sum-lbl">Hatalı DC</div>
+    </div>
+    <div class="sum-card warn">
+      <div class="sum-val" id="sumWarn">0</div>
+      <div class="sum-lbl">Uyarı</div>
+    </div>
+    <div class="sum-card info">
+      <div class="sum-val" id="sumTotal">2</div>
+      <div class="sum-lbl">Toplam DC</div>
+    </div>
+  </div>
+
+  <!-- DC Table -->
+  <div class="section">
+    <div class="section-title">Domain Controller Durumu</div>
+    <table class="dc-table" id="dcTable">
+      <thead>
+        <tr>
+          <th>DC Adı</th>
+          <th>İşletim Sistemi</th>
+          <th>Uptime</th>
+          <th>SYSVOL / DFSR</th>
+          <th>FSMO Rolleri</th>
+          <th>Global Catalog</th>
+          <th>IP Adresi</th>
+          <th>DNS Sunucusu</th>
+          <th>Ping</th>
+          <th>Rep. Durumu (6s)</th>
+        </tr>
+      </thead>
+      <tbody id="dcTableBody"></tbody>
+    </table>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline-card">
+    <div class="timeline-header">Replikasyon Zaman Çizelgesi (Son 6 Saat)</div>
+    <div class="timeline-body">
+      <div class="tl-ticks">
+        <span>-6s</span><span>-5s</span><span>-4s</span><span>-3s</span><span>-2s</span><span>-1s</span><span>Şimdi</span>
+      </div>
+      <div id="tlRows"></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <span>PowerShell AD Health Check v2.0 — KBDC.LOCAL</span>
+  <span id="footerTime"></span>
+</div>
+
+<!-- Tooltip -->
+<div class="tooltip" id="tooltip">
+  <div class="tooltip-title" id="ttTitle"></div>
+  <div id="ttBody"></div>
+</div>
+
+<script>
+// =============================================
+// DATA — PowerShell'den gelen veriler buraya
+// =============================================
+const DC_DATA = [
+  {
+    name: "KBDC01",
+    os: "Windows Server 2019 Standard",
+    uptime: "0 Days, 1 Hours, 33 Mins",
+    dfsr: "OK",
+    fsmo: ["PDC", "RID", "Infra", "Schema", "Naming"],
+    gc: true,
+    ip: "10.210.9.90",
+    dns: ["10.210.9.90"],
+    pingStatus: "OK",
+    repStatus: "ERROR",
+    repNote: "1 in 6h",
+    status: "err"
+  },
+  {
+    name: "KBSCCM",
+    os: "Windows Server 2022 Standard",
+    uptime: "28 Days, 2 Hours, 56 Mins",
+    dfsr: "OK",
+    fsmo: [],
+    gc: true,
+    ip: "10.210.9.97",
+    dns: ["10.210.9.90", "127.0.0.1"],
+    pingStatus: "OK",
+    repStatus: "OK",
+    repNote: "Last 6h",
+    status: "ok"
+  }
+];
+
+// Timeline events per DC (last 6 hours, position 0-1)
+const TIMELINE = [
+  { dc: "KBDC01 → KBSCCM", events: [
+    { pos: 0.05, status: "ok",  info: { zaman: "08:12", durum: "OK", gecikme: "2 sn" }},
+    { pos: 0.25, status: "ok",  info: { zaman: "09:45", durum: "OK", gecikme: "1 sn" }},
+    { pos: 0.48, status: "err", info: { zaman: "11:02", durum: "HATA", gecikme: "—", hata: "Replication timeout" }},
+    { pos: 0.70, status: "ok",  info: { zaman: "12:30", durum: "OK", gecikme: "3 sn" }},
+    { pos: 0.90, status: "ok",  info: { zaman: "13:50", durum: "OK", gecikme: "2 sn" }},
+  ]},
+  { dc: "KBSCCM → KBDC01", events: [
+    { pos: 0.08, status: "ok",  info: { zaman: "08:15", durum: "OK", gecikme: "1 sn" }},
+    { pos: 0.30, status: "ok",  info: { zaman: "09:50", durum: "OK", gecikme: "2 sn" }},
+    { pos: 0.55, status: "ok",  info: { zaman: "11:20", durum: "OK", gecikme: "1 sn" }},
+    { pos: 0.75, status: "ok",  info: { zaman: "12:45", durum: "OK", gecikme: "2 sn" }},
+    { pos: 0.95, status: "ok",  info: { zaman: "14:04", durum: "OK", gecikme: "1 sn" }},
+  ]}
+];
+
+// =============================================
+// RENDER
+// =============================================
+const now = new Date();
+document.getElementById('reportTime').textContent = now.toLocaleString('tr-TR');
+document.getElementById('footerTime').textContent = 'Rapor tarihi: ' + now.toLocaleString('tr-TR');
+
+// --- DC Table ---
+const tbody = document.getElementById('dcTableBody');
+DC_DATA.forEach(dc => {
+  const tr = document.createElement('tr');
+  if (dc.status === 'err') tr.classList.add('has-error');
+
+  const fsmoHtml = dc.fsmo.length
+    ? dc.fsmo.map(r => `<span class="role-tag">${r}</span>`).join('')
+    : '<span style="color:var(--text3);font-size:12px">—</span>';
+
+  let repBadge = `<span class="badge ok">✓ OK (${dc.repNote})</span>`;
+  if (dc.repStatus === 'ERROR') {
+    repBadge = `<span class="badge err">✕ ERROR (${dc.repNote})</span>`;
+  } else if (dc.repStatus === 'WARNING') {
+    repBadge = `<span class="badge warn">! WARNING (${dc.repNote})</span>`;
+  }
+
+  tr.innerHTML = `
+    <td><div class="dc-name-cell">
+      <div class="dc-dot ${dc.status}"></div>
+      <span class="dc-hostname">${dc.name}</span>
+    </div></td>
+    <td><span class="mono-text">${dc.os}</span></td>
+    <td><span class="mono-text">${dc.uptime}</span></td>
+    <td><span class="badge ${dc.dfsr === 'OK' ? 'ok' : 'err'}">DFSR (${dc.dfsr})</span></td>
+    <td><div class="role-tags">${fsmoHtml}</div></td>
+    <td><span class="badge ${dc.gc ? 'info' : 'neutral'}">${dc.gc ? 'Yes' : 'No'}</span></td>
+    <td><span class="ip-text">${dc.ip}</span></td>
+    <td><span class="ip-text">${dc.dns.join(', ')}</span></td>
+    <td><span class="badge ok">${dc.pingStatus}</span></td>
+    <td>${repBadge}</td>
+  `;
+  tbody.appendChild(tr);
+});
+
+// --- Summary badges ---
+const ok  = DC_DATA.filter(d => d.status === 'ok').length;
+const err = DC_DATA.filter(d => d.status === 'err').length;
+const warn = DC_DATA.filter(d => d.status === 'warn').length;
+document.getElementById('sumOK').textContent    = ok;
+document.getElementById('sumErr').textContent   = err;
+document.getElementById('sumWarn').textContent  = warn;
+document.getElementById('sumTotal').textContent = DC_DATA.length;
+
+// --- Timeline ---
+const tooltip = document.getElementById('tooltip');
+const tlRows = document.getElementById('tlRows');
+TIMELINE.forEach(row => {
+  const div = document.createElement('div');
+  div.className = 'tl-row';
+
+  const eventsHtml = row.events.map(ev => {
+    const leftPct = (ev.pos * 100).toFixed(1) + '%';
+    const isErr  = ev.status === 'err' || ev.status === 'warn';
+    const timeLabel = isErr
+      ? `${ev.info.zaman}<br><span style="font-size:9px">${ev.info.hata || ev.info.durum}</span>`
+      : ev.info.zaman;
+    return `<div class="tl-event-wrap" style="left:${leftPct}"
+        data-info='${JSON.stringify(ev.info)}' data-dc="${row.dc}">
+      <div class="tl-dot ${ev.status}-ev"></div>
+      <div class="tl-ev-time ${ev.status}-t">${timeLabel}</div>
+    </div>`;
+  }).join('');
+
+  div.innerHTML = `
+    <div class="tl-label">${row.dc}</div>
+    <div class="tl-bar-wrap">${eventsHtml}</div>
+    <div class="tl-time-label"></div>
+  `;
+  tlRows.appendChild(div);
+});
+
+// Timeline tooltip
+document.querySelectorAll('.tl-event-wrap').forEach(el => {
+  el.addEventListener('mouseenter', e => {
+    const info = JSON.parse(el.dataset.info);
+    const dc   = el.dataset.dc;
+    document.getElementById('ttTitle').textContent = dc;
+    document.getElementById('ttBody').innerHTML = Object.entries(info).map(([k,v]) =>
+      `<div class="tooltip-row"><span>${k}</span><span>${v}</span></div>`
+    ).join('');
+    tooltip.style.left = (e.clientX + 14) + 'px';
+    tooltip.style.top  = (e.clientY - 10) + 'px';
+    tooltip.classList.add('show');
+  });
+  el.addEventListener('mouseleave', () => tooltip.classList.remove('show'));
+  el.addEventListener('mousemove', e => {
+    tooltip.style.left = (e.clientX + 14) + 'px';
+    tooltip.style.top  = (e.clientY - 10) + 'px';
+  });
+});
+
+document.querySelectorAll('.dc-dot').forEach(dot => {
+  const row = dot.closest('tr');
+  if (!row) return;
+  dot.addEventListener('mouseenter', () => row.classList.add('row-focus'));
+  dot.addEventListener('mouseleave', () => row.classList.remove('row-focus'));
+});
+</script>
+</body>
+</html>

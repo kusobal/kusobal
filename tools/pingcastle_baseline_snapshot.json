@@ -1,0 +1,678 @@
+﻿{
+    "GeneratedAt":  "2026-04-05 19:24:35",
+    "DomainRiskScore":  56,
+    "RiskRating":  "Acceptable",
+    "CategoryRisk":  [
+                         {
+                             "Category":  "Privileged Infrastructure",
+                             "Penalty":  242,
+                             "Matched":  20,
+                             "RiskPct":  100
+                         },
+                         {
+                             "Category":  "Certificate Authority",
+                             "Penalty":  134,
+                             "Matched":  11,
+                             "RiskPct":  100
+                         },
+                         {
+                             "Category":  "Privileged Accounts",
+                             "Penalty":  67,
+                             "Matched":  7,
+                             "RiskPct":  67
+                         },
+                         {
+                             "Category":  "Anomalies",
+                             "Penalty":  45,
+                             "Matched":  3,
+                             "RiskPct":  56.2
+                         },
+                         {
+                             "Category":  "Stale Objects",
+                             "Penalty":  10,
+                             "Matched":  1,
+                             "RiskPct":  12.5
+                         },
+                         {
+                             "Category":  "Hygiene",
+                             "Penalty":  4,
+                             "Matched":  1,
+                             "RiskPct":  6.7
+                         },
+                         {
+                             "Category":  "Trusts",
+                             "Penalty":  0,
+                             "Matched":  0,
+                             "RiskPct":  0
+                         }
+                     ],
+    "RemediationStates":  [
+
+                          ],
+    "Findings":  [
+                     {
+                         "Category":  "Trusts",
+                         "Rule":  "Trust posture",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No trust relation found or trust data unavailable",
+                         "Recommendation":  "Enable SID filtering, disable unnecessary TGT delegation, and review selective authentication."
+                     },
+                     {
+                         "Category":  "Trusts",
+                         "Rule":  "SIDHistory usage",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No SIDHistory usage detected",
+                         "Recommendation":  "Review and remove unnecessary SIDHistory values, especially after migration projects."
+                     },
+                     {
+                         "Category":  "Anomalies",
+                         "Rule":  "AS-REP roastable users",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No AS-REP roastable user",
+                         "Recommendation":  "Disable DONT_REQ_PREAUTH on regular users and enforce strong password policy."
+                     },
+                     {
+                         "Category":  "Anomalies",
+                         "Rule":  "krbtgt password age",
+                         "Severity":  "Critical",
+                         "Count":  681,
+                         "Sample":  "krbtgt password age: 681 days",
+                         "Recommendation":  "Rotate krbtgt password in a controlled 2-step process and document rotation cadence."
+                     },
+                     {
+                         "Category":  "Privileged Accounts",
+                         "Rule":  "Privileged account with SPN",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No privileged account with SPN",
+                         "Recommendation":  "Move SPNs to gMSA/service accounts and keep privileged users free from SPN when possible."
+                     },
+                     {
+                         "Category":  "Privileged Accounts",
+                         "Rule":  "Unconstrained delegation",
+                         "Severity":  "Critical",
+                         "Count":  2,
+                         "Sample":  "KBDC01, KBSCCM",
+                         "Recommendation":  "Remove unconstrained delegation and use constrained delegation or gMSA patterns."
+                     },
+                     {
+                         "Category":  "Privileged Accounts",
+                         "Rule":  "Constrained delegation",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No constrained delegation object",
+                         "Recommendation":  "Review all constrained delegation paths and restrict to necessary SPNs only."
+                     },
+                     {
+                         "Category":  "Privileged Accounts",
+                         "Rule":  "RBCD exposure",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No RBCD object detected",
+                         "Recommendation":  "Review and minimize msDS-AllowedToActOnBehalfOfOtherIdentity on servers and especially DC-adjacent assets."
+                     },
+                     {
+                         "Category":  "Anomalies",
+                         "Rule":  "GPP cpassword remnants",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No cpassword pattern in SYSVOL XML",
+                         "Recommendation":  "Remove GPP password entries and rotate any potentially exposed credentials immediately."
+                     },
+                     {
+                         "Category":  "Stale Objects",
+                         "Rule":  "LAPS coverage",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "LAPS check could not be completed",
+                         "Recommendation":  "Track Legacy LAPS and Windows LAPS v2 separately and enforce endpoint coverage with expiration monitoring."
+                     },
+                     {
+                         "Category":  "Stale Objects",
+                         "Rule":  "Weak Kerberos encryption",
+                         "Severity":  "High",
+                         "Count":  1,
+                         "Sample":  "krbtgt",
+                         "Recommendation":  "Prefer AES encryption types and remove DES/legacy settings from service accounts."
+                     },
+                     {
+                         "Category":  "Hygiene",
+                         "Rule":  "Password never expires (enabled users)",
+                         "Severity":  "Medium",
+                         "Count":  6,
+                         "Sample":  "Administrator, exchadmin, sdogan, kbal",
+                         "Recommendation":  "Remove password-never-expires from regular accounts and apply exception process only where required."
+                     },
+                     {
+                         "Category":  "Privileged Accounts",
+                         "Rule":  "adminCount drift",
+                         "Severity":  "Medium",
+                         "Count":  1,
+                         "Sample":  "krbtgt",
+                         "Recommendation":  "Review adminCount=1 accounts outside privileged groups and fix ACL inheritance where applicable."
+                     },
+                     {
+                         "Category":  "Privileged Accounts",
+                         "Rule":  "Privileged accounts delegatable",
+                         "Severity":  "High",
+                         "Count":  4,
+                         "Sample":  "Administrator, exchadmin, sdogan, rdemirhan",
+                         "Recommendation":  "Set AccountNotDelegated for privileged accounts unless explicitly required."
+                     },
+                     {
+                         "Category":  "Privileged Accounts",
+                         "Rule":  "Protected Users coverage",
+                         "Severity":  "High",
+                         "Count":  4,
+                         "Sample":  "Administrator, exchadmin, sdogan, rdemirhan",
+                         "Recommendation":  "Review privileged users not in Protected Users and add compatible accounts."
+                     },
+                     {
+                         "Category":  "Privileged Accounts",
+                         "Rule":  "Schema Admins populated",
+                         "Severity":  "Medium",
+                         "Count":  4,
+                         "Sample":  "rdemirhan, sdogan, exchadmin, Administrator",
+                         "Recommendation":  "Keep Schema Admins empty by default and use JIT elevation for schema operations."
+                     },
+                     {
+                         "Category":  "Privileged Accounts",
+                         "Rule":  "Recycle Bin disabled",
+                         "Severity":  "Medium",
+                         "Count":  1,
+                         "Sample":  "AD Recycle Bin is not enabled",
+                         "Recommendation":  "Enable AD Recycle Bin after change control and backup validation."
+                     },
+                     {
+                         "Category":  "Stale Objects",
+                         "Rule":  "Machine account quota",
+                         "Severity":  "Low",
+                         "Count":  "N/A",
+                         "Sample":  "Machine account quota unavailable",
+                         "Recommendation":  "Set machine account quota to 0 when possible and use controlled join workflows."
+                     },
+                     {
+                         "Category":  "Anomalies",
+                         "Rule":  "Minimum password length",
+                         "Severity":  "High",
+                         "Count":  7,
+                         "Sample":  "Minimum password length: 7",
+                         "Recommendation":  "Increase minimum password length (preferably 12+) and apply stronger fine-grained policies where needed."
+                     },
+                     {
+                         "Category":  "Privileged Accounts",
+                         "Rule":  "Native admin recent login",
+                         "Severity":  "High",
+                         "Count":  2,
+                         "Sample":  "Builtin admin last logon: 2 day(s) ago",
+                         "Recommendation":  "Limit usage of builtin admin and prefer dedicated tiered admin accounts."
+                     },
+                     {
+                         "Category":  "Anomalies",
+                         "Rule":  "AD backup age",
+                         "Severity":  "Low",
+                         "Count":  "N/A",
+                         "Sample":  "Backup metadata unavailable from DC event logs",
+                         "Recommendation":  "Run and monitor regular system state backups for domain controllers."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "DC spooler exposure",
+                         "Severity":  "High",
+                         "Count":  2,
+                         "Sample":  "KBDC01, KBSCCM",
+                         "Recommendation":  "Disable print spooler service on domain controllers."
+                     },
+                     {
+                         "Category":  "Anomalies",
+                         "Rule":  "DC coercion exposure",
+                         "Severity":  "High",
+                         "Count":  2,
+                         "Sample":  "Potential coercion path indicator (spooler running): KBDC01, KBSCCM",
+                         "Recommendation":  "Harden RPC coercion paths and reduce exposed printer-related interfaces."
+                     },
+                     {
+                         "Category":  "Anomalies",
+                         "Rule":  "DC audit posture",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "Audit policy appears present on reachable DCs",
+                         "Recommendation":  "Enable and verify advanced audit policy baseline on all domain controllers."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Old NTLM posture",
+                         "Severity":  "High",
+                         "Count":  2,
+                         "Sample":  "KBDC01: LmCompatibilityLevel=; KBSCCM: LmCompatibilityLevel=",
+                         "Recommendation":  "Set LmCompatibilityLevel to 5 on DCs and disable legacy NTLM protocols."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "LDAP signing posture",
+                         "Severity":  "Medium",
+                         "Count":  2,
+                         "Sample":  "KBDC01: LDAPServerIntegrity=1; KBSCCM: LDAPServerIntegrity=1",
+                         "Recommendation":  "Set LDAPServerIntegrity to enforce LDAP signing on domain controllers."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "LDAP channel binding posture",
+                         "Severity":  "High",
+                         "Count":  2,
+                         "Sample":  "KBDC01: LdapEnforceChannelBinding=; KBSCCM: LdapEnforceChannelBinding=",
+                         "Recommendation":  "Set LdapEnforceChannelBinding to a protected mode and validate client compatibility."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Shadow admin exposure",
+                         "Severity":  "High",
+                         "Count":  4,
+                         "Sample":  "Group Policy Creator Owners: exposure=4",
+                         "Recommendation":  "Review delegated operator groups and remove non-essential members and nested control paths."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tiering violations",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No privileged logon detected from non-DC endpoints in lookback window",
+                         "Recommendation":  "Restrict privileged account logons to tiered admin workstations and domain controllers only."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier0: DCSync rights exposure",
+                         "Severity":  "Critical",
+                         "Count":  4,
+                         "Sample":  "NT AUTHORITY\\ENTERPRISE DOMAIN CONTROLLERS; BUILTIN\\Administrators; KUSO\\Enterprise Read-only Domain Controllers; KUSO\\Domain Controllers",
+                         "Recommendation":  "Restrict DS replication rights to built-in replication principals and remove delegated DCSync paths."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier0: Kerberoastable normal users",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No non-privileged SPN user found",
+                         "Recommendation":  "Migrate service identities to gMSA, rotate stale passwords, and remove unnecessary SPNs."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier0: Dangerous ACE on critical objects",
+                         "Severity":  "Critical",
+                         "Count":  28,
+                         "Sample":  "NT AUTHORITY\\SYSTEM on DC=kuso,DC=local [GenericAll]; BUILTIN\\Administrators on DC=kuso,DC=local [WriteDacl,WriteOwner]; KUSO\\Domain Admins on DC=kuso,DC=local [WriteDacl,WriteOwner]; KUSO\\Enterprise Admins on DC=kuso,DC=local [GenericAll]; KUSO\\Organization Management on DC=kuso,DC=local [GenericAll]",
+                         "Recommendation":  "Remove non-essential GenericAll/GenericWrite/WriteDacl/WriteOwner ACEs from Tier-0 objects."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier0: NTLMv1 active usage",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No NTLMv1 logon evidence in sampled 4624 events",
+                         "Recommendation":  "Identify NTLMv1 clients, enforce NTLM hardening and eliminate legacy authentication paths."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier0: Tier model violations",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No privileged logon detected from non-DC endpoints in lookback window",
+                         "Recommendation":  "Separate Tier-0 and Tier-1 administration paths and enforce PAW usage for privileged identities."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier1: Shadow credentials exposure",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No object with msDS-KeyCredentialLink found",
+                         "Recommendation":  "Review WHfB key credentials and restrict write permissions to msDS-KeyCredentialLink."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier1: Pre-Windows 2000 compatible access",
+                         "Severity":  "High",
+                         "Count":  1,
+                         "Sample":  "Authenticated Users",
+                         "Recommendation":  "Remove broad identities from Pre-Windows 2000 Compatible Access group."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier1: DNS admin and zone transfer",
+                         "Severity":  "High",
+                         "Count":  3,
+                         "Sample":  "DnsAdmins=0; ZoneTransferRisk=3; 0.in-addr.arpa, 127.in-addr.arpa, 255.in-addr.arpa",
+                         "Recommendation":  "Minimize DnsAdmins membership and enforce secure zone transfer configuration."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier1: Inactive or orphan service accounts",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No stale/disabled SPN service account detected",
+                         "Recommendation":  "Disable or clean stale SPN accounts and migrate service identities to managed models."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier1: gMSA adoption",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "gMSA=0, SPN users=0, legacy service identities=0",
+                         "Recommendation":  "Increase gMSA usage and reduce password-managed service accounts."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier1: SYSVOL and NETLOGON posture",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "FRS running on 0 DC(s); GPP cpassword files=0; NETLOGON sensitive hits=0",
+                         "Recommendation":  "Use DFS-R only, remove credential residues from SYSVOL/NETLOGON, and monitor script shares."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier1: Privileged 24h behavior anomalies",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No off-hours privileged logon anomaly in last 24h",
+                         "Recommendation":  "Investigate off-hours privileged activity and enforce just-in-time administrative sessions."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier2: FGPP coverage for privileged accounts",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "FGPP coverage appears acceptable or no FGPP configured",
+                         "Recommendation":  "Apply stricter fine-grained password policies to privileged identities."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier2: SMB and LDAP signing baseline",
+                         "Severity":  "Medium",
+                         "Count":  4,
+                         "Sample":  "SMB signing issues=0; LDAP signing issues=2; LDAP channel binding issues=2",
+                         "Recommendation":  "Enforce SMB signing, LDAP signing and channel binding across all domain controllers."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier1: GPO owner anomalies",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No Domain Users/Authenticated Users/Everyone GPO owner anomaly",
+                         "Recommendation":  "Set secure GPO ownership and remove broad principals from GPO owner chain."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier1: GPO write permission abuse",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No risky GPO write delegation detected",
+                         "Recommendation":  "Remove unsafe GPO edit and modify-security rights from non-admin principals."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier2: Orphan and disabled GPO posture",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "Unlinked (never linked) GPO=0; Disabled/partial GPO=0; Sample=None",
+                         "Recommendation":  "Clean unlinked/disabled GPOs and reduce policy management noise."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier2: Computer object owner anomalies",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No DC computer object owner anomaly detected",
+                         "Recommendation":  "Set expected owner principals for Tier-0 computer objects and review delegated ACL changes."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier2: WinRM and RDP authorization scope",
+                         "Severity":  "Medium",
+                         "Count":  2,
+                         "Sample":  "KBDC01: RM=1,RDP=1; KBSCCM: RM=1,RDP=1",
+                         "Recommendation":  "Limit WinRM/RDP local group membership on domain controllers to approved admins only."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier2: CredSSP exposure",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No CredSSP enabled DC detected",
+                         "Recommendation":  "Disable CredSSP where not required and prefer Kerberos constrained delegation patterns."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier0: ESC1 - Enrollee supplies subject",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "Check could not be completed",
+                         "Recommendation":  "Control unavailable: verify certificate template ESC1 conditions manually."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier0: ESC4 - Template ACL write abuse",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "Check could not be completed",
+                         "Recommendation":  "Control unavailable: review template ACL permissions manually."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier0: ESC6 - SAN attribute injection flag",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No ESC6 flag detected on reachable CA servers",
+                         "Recommendation":  "Disable EDITF_ATTRIBUTESUBJECTALTNAME2 on enterprise CAs unless strictly required and governed."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Tier1: ESC8 - AD CS HTTP relay surface",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "No reachable AD CS /certsrv endpoint detected",
+                         "Recommendation":  "Limit or disable AD CS web enrollment and harden NTLM relay protections on CA web endpoints."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Account Operators",
+                         "Severity":  "High",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "Accounts with broad account-management rights should remain empty in modern tiered administration."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Administrator",
+                         "Severity":  "Critical",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "Built-in Administrator should be protected, monitored and rarely used."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Administrators",
+                         "Severity":  "Critical",
+                         "Count":  7,
+                         "Sample":  "Users=4, Computers=0, Indirect=3, Unresolved=0",
+                         "Recommendation":  "Builtin Administrators grants extensive control on domain controllers and critical systems."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Backup Operators",
+                         "Severity":  "High",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "Backup privileges can bypass file ACL boundaries and expose sensitive data."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Certificate Operators",
+                         "Severity":  "Medium",
+                         "Count":  1,
+                         "Sample":  "Object not found or inaccessible",
+                         "Recommendation":  "Certificate-related operations can impact PKI trust and authentication paths. Group cannot be resolved or access is denied."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Certificate Publishers",
+                         "Severity":  "Medium",
+                         "Count":  1,
+                         "Sample":  "Object not found or inaccessible",
+                         "Recommendation":  "Publishing certificate data can indirectly affect authentication hygiene. Group cannot be resolved or access is denied."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: DnsAdmins",
+                         "Severity":  "Medium",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "DNS admins can influence name resolution and potentially abuse DC plugin loading paths."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Domain Admins",
+                         "Severity":  "Critical",
+                         "Count":  4,
+                         "Sample":  "Users=4, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "Domain-wide administrative rights should be tightly limited and controlled."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Enterprise Admins",
+                         "Severity":  "Critical",
+                         "Count":  4,
+                         "Sample":  "Users=4, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "Forest-wide administrative rights should remain minimal and break-glass only."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Enterprise Key Admins",
+                         "Severity":  "Medium",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "Key administration rights can affect account credentials and key material."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Group Policy Creator Owners",
+                         "Severity":  "Medium",
+                         "Count":  4,
+                         "Sample":  "Users=4, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "GPO creation rights can enable broad policy abuse if not constrained."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Print Operators",
+                         "Severity":  "High",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "Print-related rights on DCs have historically enabled privilege escalation paths."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Server Operators",
+                         "Severity":  "High",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "Server operators can perform service-level changes that impact domain security."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Schema Admins",
+                         "Severity":  "Critical",
+                         "Count":  4,
+                         "Sample":  "Users=4, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "Schema changes are high-impact and should be temporary, approved and audited."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Key Admins",
+                         "Severity":  "Medium",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "Key admin roles should be isolated and protected by strong monitoring."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: AdminSDHolder",
+                         "Severity":  "Critical",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "AdminSDHolder ACL controls protected accounts and must be hardened."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Builtin",
+                         "Severity":  "Medium",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "Builtin container content should be reviewed for delegated administrative access."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Public Key Services",
+                         "Severity":  "Medium",
+                         "Count":  1,
+                         "Sample":  "Object not found or inaccessible",
+                         "Recommendation":  "PKI configuration objects define certificate trust behavior across the forest."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Computers",
+                         "Severity":  "Medium",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "Default Computers container delegation should be reviewed for abuse paths."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Domain Controllers",
+                         "Severity":  "Critical",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "Membership should only contain legitimate domain controller computer accounts."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: DC=kuso,DC=local",
+                         "Severity":  "Medium",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "Domain root ACL and delegated links can create indirect control paths."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Enterprise Read-only Domain Controllers",
+                         "Severity":  "Low",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "Review membership to ensure only intended RODC computer accounts are present."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Group Policy Creator Owners",
+                         "Severity":  "Medium",
+                         "Count":  4,
+                         "Sample":  "Users=4, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "GPO creator rights should align with delegated administration boundaries."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: krbtgt",
+                         "Severity":  "Medium",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "krbtgt account lifecycle and password rotations are critical against ticket forgery."
+                     },
+                     {
+                         "Category":  "Privileged Infrastructure",
+                         "Rule":  "Privileged Review: Read-only Domain Controllers",
+                         "Severity":  "Medium",
+                         "Count":  0,
+                         "Sample":  "Users=0, Computers=0, Indirect=0, Unresolved=0",
+                         "Recommendation":  "RODC group membership should reflect actual deployment and branch office design."
+                     }
+                 ]
+}

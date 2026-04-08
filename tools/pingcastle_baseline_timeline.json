@@ -1,0 +1,602 @@
+﻿[
+    {
+        "GeneratedAt":  "2026-04-03 12:13:37",
+        "PreviousSnapshot":  "2026-04-03 12:03:19",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 13:19:15",
+        "PreviousSnapshot":  "2026-04-03 12:13:37",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 13:30:34",
+        "PreviousSnapshot":  "2026-04-03 13:19:15",
+        "TotalDifferences":  2,
+        "NewFindings":  0,
+        "ChangedFindings":  2,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 13:38:28",
+        "PreviousSnapshot":  "2026-04-03 13:30:34",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 13:42:34",
+        "PreviousSnapshot":  "2026-04-03 13:38:28",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 13:42:04",
+        "PreviousSnapshot":  "2026-04-03 13:42:34",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 13:44:38",
+        "PreviousSnapshot":  "2026-04-03 13:42:04",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 13:57:28",
+        "PreviousSnapshot":  "2026-04-03 13:44:38",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 13:58:29",
+        "PreviousSnapshot":  "2026-04-03 13:57:28",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 14:06:43",
+        "PreviousSnapshot":  "2026-04-03 13:58:29",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 14:05:57",
+        "PreviousSnapshot":  "2026-04-03 14:06:43",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 14:07:46",
+        "PreviousSnapshot":  "2026-04-03 14:05:57",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 14:16:36",
+        "PreviousSnapshot":  "2026-04-03 14:07:46",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 14:17:37",
+        "PreviousSnapshot":  "2026-04-03 14:16:36",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 14:16:17",
+        "PreviousSnapshot":  "2026-04-03 14:17:37",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 14:21:46",
+        "PreviousSnapshot":  "2026-04-03 14:16:17",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 14:26:22",
+        "PreviousSnapshot":  "2026-04-03 14:21:46",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 14:24:52",
+        "PreviousSnapshot":  "2026-04-03 14:26:22",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 14:27:26",
+        "PreviousSnapshot":  "2026-04-03 14:24:52",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 14:34:34",
+        "PreviousSnapshot":  "2026-04-03 14:27:26",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 14:40:26",
+        "PreviousSnapshot":  "2026-04-03 14:34:34",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 14:47:38",
+        "PreviousSnapshot":  "2026-04-03 14:40:26",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 14:51:13",
+        "PreviousSnapshot":  "2026-04-03 14:47:38",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 15:02:54",
+        "PreviousSnapshot":  "2026-04-03 14:51:13",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-03 15:11:10",
+        "PreviousSnapshot":  "2026-04-03 15:02:54",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 15:50:34",
+        "PreviousSnapshot":  "2026-04-03 15:11:10",
+        "TotalDifferences":  4,
+        "NewFindings":  0,
+        "ChangedFindings":  4,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 15:54:35",
+        "PreviousSnapshot":  "2026-04-05 15:50:34",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 16:36:43",
+        "PreviousSnapshot":  "2026-04-05 15:54:35",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 16:40:28",
+        "PreviousSnapshot":  "2026-04-05 16:36:43",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 16:43:52",
+        "PreviousSnapshot":  "2026-04-05 16:40:28",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 16:48:17",
+        "PreviousSnapshot":  "2026-04-05 16:43:52",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 16:49:21",
+        "PreviousSnapshot":  "2026-04-05 16:48:17",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 16:52:16",
+        "PreviousSnapshot":  "2026-04-05 16:49:21",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 16:56:28",
+        "PreviousSnapshot":  "2026-04-05 16:52:16",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 17:08:51",
+        "PreviousSnapshot":  "2026-04-05 16:56:28",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 17:14:14",
+        "PreviousSnapshot":  "2026-04-05 17:08:51",
+        "TotalDifferences":  2,
+        "NewFindings":  0,
+        "ChangedFindings":  2,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 17:37:28",
+        "PreviousSnapshot":  "2026-04-05 17:14:14",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 17:43:15",
+        "PreviousSnapshot":  "2026-04-05 17:37:28",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 17:46:36",
+        "PreviousSnapshot":  "2026-04-05 17:43:15",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 17:51:16",
+        "PreviousSnapshot":  "2026-04-05 17:46:36",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 17:54:56",
+        "PreviousSnapshot":  "2026-04-05 17:51:16",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:10:55",
+        "PreviousSnapshot":  "2026-04-05 17:54:56",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:16:31",
+        "PreviousSnapshot":  "2026-04-05 18:10:55",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:22:59",
+        "PreviousSnapshot":  "2026-04-05 18:16:31",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:24:03",
+        "PreviousSnapshot":  "2026-04-05 18:22:59",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:22:28",
+        "PreviousSnapshot":  "2026-04-05 18:24:03",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:31:07",
+        "PreviousSnapshot":  "2026-04-05 18:22:28",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:34:15",
+        "PreviousSnapshot":  "2026-04-05 18:31:07",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:36:56",
+        "PreviousSnapshot":  "2026-04-05 18:34:15",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:36:47",
+        "PreviousSnapshot":  "2026-04-05 18:36:56",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:47:26",
+        "PreviousSnapshot":  "2026-04-05 18:36:47",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:00:29",
+        "PreviousSnapshot":  "2026-04-05 18:47:26",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:00:46",
+        "PreviousSnapshot":  "2026-04-05 19:00:29",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:07:11",
+        "PreviousSnapshot":  "2026-04-05 19:00:46",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:07:27",
+        "PreviousSnapshot":  "2026-04-05 19:07:11",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:10:02",
+        "PreviousSnapshot":  "2026-04-05 19:07:27",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:11:15",
+        "PreviousSnapshot":  "2026-04-05 19:10:02",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:22:25",
+        "PreviousSnapshot":  "2026-04-05 19:11:15",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:23:28",
+        "PreviousSnapshot":  "2026-04-05 19:22:25",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:24:35",
+        "PreviousSnapshot":  "2026-04-05 19:23:28",
+        "TotalDifferences":  0,
+        "NewFindings":  0,
+        "ChangedFindings":  0,
+        "ResolvedFindings":  0,
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable"
+    }
+]

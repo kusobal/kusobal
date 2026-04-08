@@ -1,0 +1,290 @@
+﻿[
+    {
+        "GeneratedAt":  "2026-04-03 15:11:10",
+        "DomainRiskScore":  54,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 15:50:34",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  12,
+        "High":  17,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 15:54:35",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  12,
+        "High":  17,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 16:36:43",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  12,
+        "High":  17,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 16:40:28",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  12,
+        "High":  17,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 16:43:52",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  12,
+        "High":  17,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 16:48:17",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  12,
+        "High":  17,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 16:49:21",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  12,
+        "High":  17,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 16:52:16",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  12,
+        "High":  17,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 16:56:28",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  12,
+        "High":  17,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 17:08:51",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  12,
+        "High":  17,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 17:14:14",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 17:37:28",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 17:43:15",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 17:46:36",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 17:51:16",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 17:54:56",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:10:55",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:16:31",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:22:59",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:24:03",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:22:28",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:31:07",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:34:15",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:36:56",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:36:47",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 18:47:26",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:00:29",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:00:46",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:07:11",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:07:27",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:10:02",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:11:15",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:22:25",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:23:28",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    },
+    {
+        "GeneratedAt":  "2026-04-05 19:24:35",
+        "DomainRiskScore":  56,
+        "RiskRating":  "Acceptable",
+        "Critical":  11,
+        "High":  16,
+        "Medium":  20
+    }
+]

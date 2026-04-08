@@ -1,0 +1,183 @@
+﻿{
+    "GeneratedAt":  "2026-04-05T19:09:07.5333875+03:00",
+    "Activity":  [
+                     {
+                         "TimeIso":  "2026-04-03T11:45:15.2194546+03:00",
+                         "TimeDisplay":  "03/04/2026 11:45:15",
+                         "Status":  "Success",
+                         "User":  "administrator",
+                         "SourceHost":  "KBDC01",
+                         "SourceIP":  "-",
+                         "DestinationHost":  "KBDC01",
+                         "DestinationIP":  "10.210.9.90",
+                         "LogonType":  "7",
+                         "Reason":  "-"
+                     },
+                     {
+                         "TimeIso":  "2026-04-03T11:45:13.0445199+03:00",
+                         "TimeDisplay":  "03/04/2026 11:45:13",
+                         "Status":  "Success",
+                         "User":  "Administrator",
+                         "SourceHost":  "KOKO",
+                         "SourceIP":  "-",
+                         "DestinationHost":  "KBDC01",
+                         "DestinationIP":  "10.210.9.90",
+                         "LogonType":  "3",
+                         "Reason":  "-"
+                     },
+                     {
+                         "TimeIso":  "2026-04-03T10:25:24.5781226+03:00",
+                         "TimeDisplay":  "03/04/2026 10:25:24",
+                         "Status":  "Failed",
+                         "User":  "sccm_test",
+                         "SourceHost":  "KBSCCM",
+                         "SourceIP":  "-",
+                         "DestinationHost":  "KBDC01",
+                         "DestinationIP":  "10.210.9.90",
+                         "LogonType":  "-",
+                         "Reason":  "Logon failed"
+                     },
+                     {
+                         "TimeIso":  "2026-04-03T10:25:22.4639551+03:00",
+                         "TimeDisplay":  "03/04/2026 10:25:22",
+                         "Status":  "Failed",
+                         "User":  "sccm_test",
+                         "SourceHost":  "KBSCCM",
+                         "SourceIP":  "-",
+                         "DestinationHost":  "KBDC01",
+                         "DestinationIP":  "10.210.9.90",
+                         "LogonType":  "-",
+                         "Reason":  "Logon failed"
+                     },
+                     {
+                         "TimeIso":  "2026-04-03T10:25:20.3526068+03:00",
+                         "TimeDisplay":  "03/04/2026 10:25:20",
+                         "Status":  "Failed",
+                         "User":  "sccm_test",
+                         "SourceHost":  "KBSCCM",
+                         "SourceIP":  "-",
+                         "DestinationHost":  "KBDC01",
+                         "DestinationIP":  "10.210.9.90",
+                         "LogonType":  "-",
+                         "Reason":  "Logon failed"
+                     },
+                     {
+                         "TimeIso":  "2026-04-03T10:20:49.1850254+03:00",
+                         "TimeDisplay":  "03/04/2026 10:20:49",
+                         "Status":  "Failed",
+                         "User":  "testuser_wrong",
+                         "SourceHost":  "KBDC01",
+                         "SourceIP":  "-",
+                         "DestinationHost":  "KBDC01",
+                         "DestinationIP":  "10.210.9.90",
+                         "LogonType":  "-",
+                         "Reason":  "Logon failed"
+                     },
+                     {
+                         "TimeIso":  "2026-04-03T10:20:47.1422426+03:00",
+                         "TimeDisplay":  "03/04/2026 10:20:47",
+                         "Status":  "Failed",
+                         "User":  "testuser_wrong",
+                         "SourceHost":  "KBDC01",
+                         "SourceIP":  "-",
+                         "DestinationHost":  "KBDC01",
+                         "DestinationIP":  "10.210.9.90",
+                         "LogonType":  "-",
+                         "Reason":  "Logon failed"
+                     },
+                     {
+                         "TimeIso":  "2026-04-03T10:20:45.1061249+03:00",
+                         "TimeDisplay":  "03/04/2026 10:20:45",
+                         "Status":  "Failed",
+                         "User":  "testuser_wrong",
+                         "SourceHost":  "KBDC01",
+                         "SourceIP":  "-",
+                         "DestinationHost":  "KBDC01",
+                         "DestinationIP":  "10.210.9.90",
+                         "LogonType":  "-",
+                         "Reason":  "Logon failed"
+                     },
+                     {
+                         "TimeIso":  "2026-04-03T10:20:21.6505014+03:00",
+                         "TimeDisplay":  "03/04/2026 10:20:21",
+                         "Status":  "Failed",
+                         "User":  "kbal",
+                         "SourceHost":  "KOKO",
+                         "SourceIP":  "-",
+                         "DestinationHost":  "KBSCCM",
+                         "DestinationIP":  "10.210.9.92",
+                         "LogonType":  "-",
+                         "Reason":  "Logon failed"
+                     },
+                     {
+                         "TimeIso":  "2026-04-03T10:20:19.5236938+03:00",
+                         "TimeDisplay":  "03/04/2026 10:20:19",
+                         "Status":  "Failed",
+                         "User":  "kbal",
+                         "SourceHost":  "KOKO",
+                         "SourceIP":  "-",
+                         "DestinationHost":  "KBSCCM",
+                         "DestinationIP":  "10.210.9.92",
+                         "LogonType":  "-",
+                         "Reason":  "Logon failed"
+                     },
+                     {
+                         "TimeIso":  "2026-04-03T10:20:16.6687650+03:00",
+                         "TimeDisplay":  "03/04/2026 10:20:16",
+                         "Status":  "Failed",
+                         "User":  "kbal",
+                         "SourceHost":  "KOKO",
+                         "SourceIP":  "-",
+                         "DestinationHost":  "KBSCCM",
+                         "DestinationIP":  "10.210.9.92",
+                         "LogonType":  "-",
+                         "Reason":  "Logon failed"
+                     }
+                 ],
+    "FailedByUser":  [
+                         {
+                             "TargetUser":  "sccm_test",
+                             "FailedCount":  3,
+                             "LastSeenIso":  "2026-04-03T10:25:24.5781226+03:00",
+                             "LastSeenDisplay":  "03/04/2026 10:25:24",
+                             "TopSources":  "KBSCCM"
+                         },
+                         {
+                             "TargetUser":  "testuser_wrong",
+                             "FailedCount":  3,
+                             "LastSeenIso":  "2026-04-03T10:20:49.1850254+03:00",
+                             "LastSeenDisplay":  "03/04/2026 10:20:49",
+                             "TopSources":  "KBDC01"
+                         },
+                         {
+                             "TargetUser":  "kbal",
+                             "FailedCount":  3,
+                             "LastSeenIso":  "2026-04-03T10:20:21.6505014+03:00",
+                             "LastSeenDisplay":  "03/04/2026 10:20:21",
+                             "TopSources":  "KOKO"
+                         }
+                     ],
+    "FailedBySource":  [
+                           {
+                               "Source":  "KBSCCM",
+                               "FailedCount":  3,
+                               "LastSeenIso":  "2026-04-03T10:25:24.5781226+03:00",
+                               "LastSeenDisplay":  "03/04/2026 10:25:24",
+                               "TopUsers":  "sccm_test"
+                           },
+                           {
+                               "Source":  "KBDC01",
+                               "FailedCount":  3,
+                               "LastSeenIso":  "2026-04-03T10:20:49.1850254+03:00",
+                               "LastSeenDisplay":  "03/04/2026 10:20:49",
+                               "TopUsers":  "testuser_wrong"
+                           },
+                           {
+                               "Source":  "KOKO",
+                               "FailedCount":  3,
+                               "LastSeenIso":  "2026-04-03T10:20:21.6505014+03:00",
+                               "LastSeenDisplay":  "03/04/2026 10:20:21",
+                               "TopUsers":  "kbal"
+                           }
+                       ]
+}

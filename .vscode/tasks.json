@@ -1,0 +1,50 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run AD Health Check",
+			"type": "shell",
+			"command": "PowerShell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-Command",
+				"& { .\\AD-Full-HealthCheck.ps1; $report = Get-ChildItem .\\AD_Full_Overview_*.html -ErrorAction SilentlyContinue | Sort-Object LastWriteTime -Descending | Select-Object -First 1; if ($report) { Start-Process $report.FullName } elseif (Test-Path .\\latest.html) { Start-Process .\\latest.html } }"
+			],
+			"isBackground": false
+		},
+		{
+			"label": "Validate Blueprint Report",
+			"type": "shell",
+			"command": "PowerShell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-Command",
+				"& { .\\AD-Full-HealthCheck.ps1; if (Test-Path .\\latest.html) { Write-Output 'LATEST_OK' } }"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "Regenerate AD Report Now",
+			"type": "shell",
+			"command": "PowerShell",
+			"args": [
+				"-NoProfile",
+				"-ExecutionPolicy",
+				"Bypass",
+				"-Command",
+				"& { .\\AD-Full-HealthCheck.ps1 -SkipHeavyTelemetry; if (Test-Path .\\latest.html) { Write-Output 'LATEST_OK' } }"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
